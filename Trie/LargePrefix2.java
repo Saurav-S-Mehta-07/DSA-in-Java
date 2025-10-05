@@ -42,13 +42,13 @@ public class LargePrefix2 {
                 }
                 largestWithAllPrefix(curr.children[i],temp);
                 temp.deleteCharAt(temp.length()-1);
-                curr = curr.children[i];
             }
         }        
     }
 
     public static void main(String []args){
-        String words[] = {"a","app","ap","appl", "apply", "apple","banana"}; //apple
+        // String words[] = {"a","app","ap","appl", "apply", "apple","banana"}; //apple
+        String words[] = {"w", "worl", "wo", "wor", "word", "world"};
         for(int i = 0; i<words.length; i++){
             insertInTrie(words[i]);
         }
