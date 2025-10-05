@@ -4,7 +4,7 @@ package Trie;
 
 import java.util.*;
 
-public class GroupAnagram{
+public class GroupAnagram {
 
     public static void groupAnagram(String str[]){
 
