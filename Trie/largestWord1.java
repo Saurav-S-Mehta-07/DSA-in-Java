@@ -1,7 +1,6 @@
 package Trie;
 
-public class largestWord1 {
-
+public class LargestWord1 {
     public static class Node{
         Node children[] = new Node[26];
         boolean eow = false;
