@@ -1,3 +1,4 @@
+//Undirected graph is cycle 
 package Graphs;
 import java.util.*;
 public class IsCycle {
@@ -69,7 +70,6 @@ public class IsCycle {
         
         createGraph(V, graph);
          
-        //BFS traversal of  graph
         boolean res = detectCycle(graph);
         System.out.println(res);
     }

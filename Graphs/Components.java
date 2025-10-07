@@ -55,7 +55,7 @@ public class Components {
        for(int v = 0; v<graph[src].size(); v++){
           int neigh = graph[src].get(v).dest;
           if(!visited[neigh]){
-            bfsUtil(graph, visited, neigh);
+            dfsUtil(graph, visited, neigh);
           }
        }
     }
