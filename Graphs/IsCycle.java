@@ -41,7 +41,9 @@ public class IsCycle {
         boolean visited[] = new boolean[graph.length];
         for(int i = 0; i<graph.length; i++){
             if(!visited[i]){
-                return detectCycleUtil(graph,visited,i,-1);
+                 if(detectCycleUtil(graph,visited,i,-1)){
+                    return true;
+                 }
             }
         }
         return false;
