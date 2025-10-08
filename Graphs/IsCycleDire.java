@@ -56,7 +56,7 @@ public class IsCycleDire {
             }
          }
         stack[i] = false;
-         return false;
+        return false;
     }
     public static void main(String[] args){
         int V = 4;
