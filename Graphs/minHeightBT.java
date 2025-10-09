@@ -10,7 +10,7 @@ public class minHeightBT {
           graph[src].add(dest);
     }
 
-    public static int findDepth(ArrayList<Integer>[] graph, int src){
+    public static int findMinDepth(ArrayList<Integer>[] graph, int src){
 
         if(graph[src].size() == 0){
             return 1;
@@ -20,8 +20,8 @@ public class minHeightBT {
            int n1 = graph[src].get(0);
            int n2 = graph[src].get(1);
    
-           int leftHeight = findDepth(graph, n1);
-           int rightHeight = findDepth(graph, n2);
+           int leftHeight = findMinDepth(graph, n1);
+           int rightHeight = findMinDepth(graph, n2);
 
            int minHeight = Math.min(leftHeight, rightHeight);
          
@@ -29,7 +29,7 @@ public class minHeightBT {
         }
 
         else{
-            return findDepth(graph, graph[src].get(0))+1;
+            return findMinDepth(graph, graph[src].get(0))+1;
         }
 
     }
@@ -61,7 +61,7 @@ public class minHeightBT {
 
 
 
-        System.out.println(findDepth(graph, 0));
+        System.out.println(findMinDepth(graph, 0));
 
     }
 
