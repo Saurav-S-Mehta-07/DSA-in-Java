@@ -63,9 +63,8 @@ public class Bipartite {
         }
         return true;
     }
-
-  
-    public static boolean bipartite(ArrayList<Edge>[] graph){
+      
+  public static boolean bipartite(ArrayList<Edge>[] graph){
         int color[] = new int[graph.length];
         for(int i = 0; i<color.length; i++) color[i] = -1;
         for(int i = 0; i<graph.length; i++){
