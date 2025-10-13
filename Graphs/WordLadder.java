@@ -36,12 +36,10 @@ class WordLadder {
         }
         return 0; // target not reachable
     }
-
     public static void main(String[] args) {
         Set<String> dict = new HashSet<>(Arrays.asList("POON", "PLEE", "SAME", "POIE", "PLEA", "PLIE", "POIN"));
         String start = "TOON";
         String target = "PLEA";
-
         int length = wordLadderLength(start, target, dict);
         if (length == 0) System.out.println("No transformation possible.");
         else System.out.println("Length of shortest chain: " + length);
