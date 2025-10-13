@@ -3,7 +3,6 @@
 package Graphs;
 import java.util.*;
 public class DijkstrasAlgo {
-
     public static class Edge{
         int src, dest, wt;
         public Edge(int s, int d, int w){
@@ -78,7 +77,6 @@ public class DijkstrasAlgo {
                 }
             }
         }   
-
         for(int i = 0; i<dist.length; i++){
             System.out.print(dist[i] + " ");
         }
