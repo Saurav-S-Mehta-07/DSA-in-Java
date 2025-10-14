@@ -58,7 +58,7 @@ public class CheapestFlights {
             }
 
             for(int i = 0; i<graph[curr.v].size(); i++){
-                Edge e= graph[curr.v].get(i);
+                Edge e = graph[curr.v].get(i);
                 int u = e.src;
                 int v = e.dst;
                 int wt = e.wt;
