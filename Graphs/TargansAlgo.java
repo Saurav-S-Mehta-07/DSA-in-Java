@@ -17,7 +17,6 @@ public class TargansAlgo {
         int children = 0;
         visited[u] = true;
         disc[u] = low[u] = ++time;
-
         // Go through all vertices adjacent to this
         for (Integer v : adj.get(u)) {
             if (!visited[v]) {
