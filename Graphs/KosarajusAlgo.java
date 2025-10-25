@@ -98,4 +98,4 @@ public class KosarajusAlgo {
         System.out.println("Strongly Connected Components:");
         Kosaraju(graph);
     }
-}
+} 

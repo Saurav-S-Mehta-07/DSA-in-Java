@@ -71,7 +71,6 @@ public class TarjansAlgo {
         ArrayList<Edge>[] graph = new ArrayList[V];
         createGraph(graph);
         tarjanBridge(graph);
-
     }
 
 }
