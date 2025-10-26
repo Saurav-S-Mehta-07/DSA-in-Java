@@ -95,7 +95,5 @@ public class Knapsack {
         System.out.println(knapsackTab(val, wt, W));
 
         System.out.println();
-
-    
     }
 }
