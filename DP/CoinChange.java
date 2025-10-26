@@ -16,9 +16,7 @@ public class CoinChange {
             for(int j = 1; j<sum+1; j++){
                //valid
                if(coins[i-1]<=j){
-                   int includedAns = dp[i][j-coins[i-1]];
-                   int excludedAns = dp[i-1][j];
-                   dp[i][j] = includedAns + excludedAns;
+                   dp[i][j] = dp[i][j-coins[i-1]]+dp[i-1][j];
                }
                //invalid
                else{
@@ -45,7 +43,7 @@ public class CoinChange {
         // int coins[] = {1,2,3};
         // int sum = 4; //-> ans = 4
 
-        int coins[] = {2,5,6,3};
+        int coins[] = {2,5,3,6};
         int sum = 6;
         
 
