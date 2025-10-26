@@ -42,6 +42,7 @@ public class Knapsack {
         }
     }
 
+    //tabulation
     public static int knapsackTab(int val[], int wt[], int W){
         int n = val.length;
         int [][] dp  = new int[n+1][W+1];
