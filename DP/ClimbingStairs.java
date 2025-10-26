@@ -22,14 +22,15 @@ public class ClimbingStairs {
     }
 
     //tabulation
-    public static int countWaysT(int n, int[] ways){
+    public static int countWaysT(int n){
         if(n<0) return 0;
-        ways[0] = 1;
-        ways[1] = 1;
+        int dp[] = new int[n+1];        
+        dp[0] = 1;
+        dp[1] = 1;
         for(int i = 2; i<=n; i++){
-            ways[i] = ways[i-1] + ways[i-2];
+            dp[i] = dp[i-1] + dp[i-2];
         } 
-        return ways[n];
+        return dp[n];
     }
     public static void main(String[] args){
         //recursion
@@ -42,7 +43,7 @@ public class ClimbingStairs {
         // System.out.println(countWaysM(n, ways));
 
         //tabulation
-        System.out.println(countWaysT(n, ways));
+        System.out.println(countWaysT(n));
         
     }
 
