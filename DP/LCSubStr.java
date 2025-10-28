@@ -1,5 +1,7 @@
 package DP;
 
+//Longest common substring (variation of LCS)
+
 public class LCSubStr {
 
     //tabulation
