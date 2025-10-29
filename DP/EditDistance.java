@@ -48,9 +48,9 @@ public class EditDistance {
     }
     
     public static void main(String[] args){
-       String word1 = "intention", word2 = "execution";
+       String word1 = "abc", word2 = "sbd";
        int result = minOperation(word1, word2, word1.length(), word2.length());
-       System.out.println(result);
+       System.out.println(result); //5
 
        //tabulation ans
        System.out.println(minOperation(word1, word2));
