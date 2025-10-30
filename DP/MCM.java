@@ -72,7 +72,6 @@ public class MCM {
         for(int i = 0; i<dp.length; i++){
             Arrays.fill(dp[i],-1);
         }
-
         int minCost = mcmTab(arr);
         System.out.println(minCost);
     }
