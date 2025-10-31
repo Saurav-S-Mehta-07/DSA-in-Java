@@ -13,17 +13,17 @@ public class MinimumPartitioning {
         }
  
         int W = sum/2;
-        int dp[][] = new int[n][W+1];
+        int dp[][] = new int[n+1][W+1];
         
-        for(int i = 0; i<n; i++) dp[i][0] = 0;
-        for(int j = 0; j<W; j++) dp[0][j] = 0;
+        for(int i = 0; i<n+1; i++) dp[i][0] = 0;
+        for(int j = 0; j<W+1; j++) dp[0][j] = 0;
 
-        for(int i = 1; i<n; i++){
+        for(int i = 1; i<n+1; i++){
             for(int  j = 1; j<W+1; j++){
                 //valid
-                if(numbers[j-1] <= j){
+                if(numbers[i-1] <= j){
                     //include
-                    int ans1 = numbers[j-1] + dp[i-1][j-numbers[j-1]];
+                    int ans1 = numbers[i-1] + dp[i-1][j-numbers[i-1]];
 
                     //exclude
                     int ans2 = dp[i-1][j];
