@@ -52,6 +52,7 @@ public class MaxMinElQueries {
 
     public static void updateUtil(int[] arr, int idx, int Val, int si, int sj,int i){
       if(idx<si || idx>sj) return;
+
       if(si!=sj){
         int mid = (si+sj)/2;
         updateUtil(arr, idx, Val, si, mid, 2*i+1);
