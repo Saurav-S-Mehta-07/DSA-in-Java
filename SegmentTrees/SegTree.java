@@ -28,7 +28,7 @@ public class SegTree {
 
     public static int getSumUtil(int[] st, int i, int si, int sj, int qi, int qj){
        //case 1: non overlap
-       if(qj<=si || qi>=sj) return 0;
+       if(qj<si || qi>sj) return 0;
        //case 2: completely overlaping
        else if(si>=qi && sj<=qj) return st[i];
        //case 3: partial overlap
