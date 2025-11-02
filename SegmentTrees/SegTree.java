@@ -49,8 +49,8 @@ public class SegTree {
     public static void main(String[] args) {
         int arr[] = {1,2,3,4,5,6,7,8};
         int st[] = createST(arr);
-        int qi = 1;
-        int qj = 3;
+        int qi = 2;
+        int qj = 5;
         int sum = getSum(arr,st, qi, qj);
         System.out.println(sum);
     }
