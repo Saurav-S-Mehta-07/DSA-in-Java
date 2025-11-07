@@ -44,12 +44,10 @@ public class MaxMinElQueries {
         }
         System.out.println();
     }
-
     public static void update(int[] arr, int idx, int newVal){
         arr[idx] = newVal;
         updateUtil(arr, idx, newVal, 0, arr.length-1, 0);
     }
-
     public static void updateUtil(int[] arr, int idx, int Val, int si, int sj,int i){
       if(idx<si || idx>sj) return;
 
@@ -104,12 +102,10 @@ public class MaxMinElQueries {
         if(sj<qi || si>qj){
             return Integer.MAX_VALUE;
         }
-
         //completely overlap
         else if(si>=qi && sj<=qj){
             return st[i].mn;
         }
-
         //partial overlap
         else{
             int mid = (si+sj)/2;
