@@ -69,7 +69,6 @@ public class BinaryTreeDS {
             if(root == null){
                 return;
             }
-
             Queue<Node> q = new LinkedList<>();
             q.add(root);
             q.add(null);
@@ -103,7 +102,6 @@ public class BinaryTreeDS {
          if(root == null){
              return 0;
          }
-         
          int lh = height(root.left);
          int rh = height(root.right);
          return Math.max(lh,rh)+1;
@@ -114,7 +112,6 @@ public class BinaryTreeDS {
         if(root == null){
             return 0;
         }
-        
         int lc = count(root.left);
         int rc = count(root.right);
         return lc+rc+1;
@@ -122,14 +119,11 @@ public class BinaryTreeDS {
 
      //sum of nodes(data) O(n)
      public static int sum(Node root){
-
        if(root == null){
         return 0;
        }
-
        int ls = sum(root.left);
        int rs = sum(root.right);
-
        return ls + rs + root.data;
      }
     
