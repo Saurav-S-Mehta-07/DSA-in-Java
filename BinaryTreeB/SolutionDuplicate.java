@@ -25,13 +25,11 @@ public class SolutionDuplicate {
         // serialize left and right subtrees
         String left = serialize(node.left);
         String right = serialize(node.right);
-
         // create serialization string for current subtree
         String serial = node.val + "," + left + "," + right;
 
         // store frequency in map
         map.put(serial, map.getOrDefault(serial, 0) + 1);
-
         // only add once when count reaches 2
         if (map.get(serial) == 2) {
             result.add(node);
