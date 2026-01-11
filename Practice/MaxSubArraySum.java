@@ -42,33 +42,19 @@ public class MaxSubArraySum {
     // using kadanes algo O(n)
     // n + n => 2n => n
     public static void maxSubArrSumM3(int[] arr) {
-        int cs = 0;
-        int ms = Integer.MIN_VALUE;
-        int n = arr.length;
+        int maxSum = arr[0];
+        int currSum = arr[0];
 
-        for (int i = 0; i < n; i++) { // ->n
-            ms = Math.max(arr[i], ms);
+        for(int i =1; i<arr.length; i++){
+            currSum = Math.max(arr[i],arr[i]+currSum);
+            maxSum = Math.max(maxSum,currSum);
         }
-
-        if (ms < 0) {
-            System.out.println("maxSum of subarray O(n): " + ms);
-            return;
-        }
-
-        ms = Integer.MIN_VALUE;
-
-        for (int i = 0; i < n; i++) { // -> n
-            cs = cs + arr[i];
-            if (cs < 0)
-                cs = 0;
-            ms = Math.max(cs, ms);
-        }
-
-        System.out.println("maxSum of subarray O(n): " + ms);
+        System.out.println("maxSum of subarray O(n): " + maxSum);
     }
 
     public static void main(String[] args) {
         int arr[] = { -1, -2, 4, -2, -1, 1, 5, -3 };
+        // int arr[] = {-1,-2,-3,-4,-5};
         maxSubArrSumM1(arr);
         maxSubArrSumM2(arr);
         maxSubArrSumM3(arr);
