@@ -1,6 +1,21 @@
 package Practice;
 public class PrintAllPairs{
+
+    private static void allPairs(int[] arr){
+        int n = arr.length;
+        int pair = 0;
+        pair = (n*(n-1))/2;
+
+        for(int i = 0; i<n;i++){
+            for(int j = i+1; j<n; j++){
+                System.out.print("( "+ arr[i] + ", " + arr[j] + " ) ");
+            }
+            System.out.println();
+        }
+        System.out.println("total number of pairs = " + pair);
+    }
     public static void main(String args[]){
-        System.out.println("hello world");
+        int arr[] = {2,4,6,8,10};   
+        allPairs(arr);
     }
 }
